@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="872px" viewBox="0 0 1440 872" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M472.435446,-1 L488.111,44 L954.889,44 L970.564554,-1 L1443,-1 L1442.45,44 L1443,44 L1443,871 L0,871 L0,44 L0.549,44 L0,-1 L472.435446,-1 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Interfaz-de-usuario-Escuela-Militar---Desktop-HD-" transform="translate(0.000000, -1447.000000)">
+            <g id="3847" transform="translate(0.000000, 1448.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill-opacity="0.85" fill="#000000" style="mix-blend-mode: multiply;" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

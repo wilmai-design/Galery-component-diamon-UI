@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+        <div class="box-before"></div>
+
+        <div class="wrapper-galery">
+            <div class="item-galery item-big">
+                <a class="btn btn-primary" href="#" role="button">
+                    <img src="img/img-1.jpg" class="img-fluid" alt="Responsive image">
+                    Link
+                </a>
+            </div>
+            <div class="item-galery item-normal">
+                <a class="btn btn-primary" href="#" role="button">
+                    <img src="img/img-1.jpg" class="img-fluid" alt="Responsive image">
+                    Link
+                </a>
+            </div>
+            <div class="item-galery item-normal item-small">
+                <a class="btn btn-primary" href="#" role="button">
+                    <img src="img/img-1.jpg" class="img-fluid" alt="Responsive image">
+                    Link
+                </a>
+            </div>
+            <div class="item-galery item-normal">
+                <a class="btn btn-primary" href="#" role="button">
+                    <img src="img/img-1.jpg" class="img-fluid" alt="Responsive image">
+                    Link
+                </a>
+            </div>
+            <div class="item-galery item-normal item-small">
+                <a class="btn btn-primary" href="#" role="button">
+                    <img src="img/img-1.jpg" class="img-fluid" alt="Responsive image">
+                </a>
+            </div>
+            <!-- Boton cerrar -->
+            <a class="btn btn-primary btn-cerrar" href="#" role="button">X</a>
+        </div>
+    </div>
+    <!-- <a class="btn btn-primary btn-cerrar" href="#" role="button">X</a> -->
+
+
+    <!-- <h1>Hello, world!</h1> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script>
+$(document).ready(function(){
+    
+    $(document).on("click",".btn-cerrar",function(){
+        $(".item-galery.active").removeClass("active");
+        $(".item-galery").addClass('active-reverse'); 
+        $('.btn-cerrar').hide();
+    });
+   
+    $(document).on("click",".item-galery",function(){
+            
+            $('.btn-cerrar').hide();
+            $(".item-galery").removeClass('blur');
+            $(".item-galery").addClass('blur'); 
+            $(this).addClass('active');
+            $('.btn-cerrar').show("slow");
+            
+
+    });
+});
+
+        
+    </script>
+
+    <style>
+        /* .item-galery {
+            transform: scale(0);
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #C00;
+            transition: all 5s;
+        }
+        .item-galery.active {
+            transform: scale(1);
+        } */
+
+        .item-galery.blur.active {
+            /* width: 120px;
+            height: 120px;
+            background-color: violet;
+            margin: 50px; */
+            animation: openitem 1.5s ease-out .5s 1 alternate;
+            animation-fill-mode: forwards;
+            z-index: 20;
+            position: relative;
+            /* height: 300px; */
+            /* top: -440px; */
+        }
+        div:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes openitem {
+            0% {
+                /* border-radius: 0 0 0 0; */
+                transform: translate(0px, 0px) rotate(45deg);
+                /* width: auto; */
+                /* transform: rotate(0deg); */
+                /* left: auto; */
+                z-index: 20;
+            }
+
+            25% {
+                transform: translate(0px, -104px) rotate(0deg);
+                width: auto;
+            }
+
+            60% {
+                /* width: auto; */
+                left: auto;
+                /* top: initial; */
+                position: relative;
+                height: 100vh;
+            }
+
+            75% {
+                /* position: absolute; */
+            }
+
+            100% {
+                /* border-radius: 50% 50% 50% 50%; */
+                /* transform: translate(0px, -74px) rotate(0deg); */
+                /* width: 100%; */
+                /* transform: rotate(180deg); */
+                transform: translate(0px, -104px) rotate(0deg);
+                width: 100%;
+                z-index: 9;
+                left: 0px;
+                /* top: 20px; */
+                height: 100vh;
+                position: relative ;
+                top: 0px;
+            }
+        }
+
+    </style>
+  </body>
+</html>
